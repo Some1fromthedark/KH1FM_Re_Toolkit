@@ -1,0 +1,5 @@
+{
+	"mode": "decrypt",
+	"input_path": "files/Hashlist.bin",
+	"output_path": "files/Hashlist.txt"
+}

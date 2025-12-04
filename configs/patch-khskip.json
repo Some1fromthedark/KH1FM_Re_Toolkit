@@ -1,0 +1,6 @@
+{
+	"mode": "patch",
+	"patch_paths": [
+		"patches/khskip.json"
+	]
+}

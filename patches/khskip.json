@@ -1,0 +1,19 @@
+{
+	"files": [
+		{
+			"patch_target": "stage2.cnf",
+			"file_path": "files/khskip/stage2.cnf",
+			"compressed": false,
+			"parent": "iso",
+			"visible": true
+		},
+		{
+			"patch_target": "khskip.elf",
+			"file_path": "files/khskip/khskip.elf",
+			"compressed": false,
+			"parent": "iso",
+			"visible": true,
+			"entry_point": true
+		}
+	]
+}
