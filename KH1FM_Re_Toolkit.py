@@ -423,7 +423,7 @@ def patch(config):
             file_patch = idx_entries_to_update[file_hash]
             _, file_path, compressed, _, _, _ = file_patch
             new_idx_entry = idx_utils.create_idx_entry(file_hash, file_path, int(compressed))
-            _, _, parent, visibile, _ = idx_entries_to_update[file_hash]
+            _, _, _, parent, visibile, _ = idx_entries_to_update[file_hash]
         else:
             wrapped_idx_entry = wrapped_idx_entries[file_hash]
             unwrapped_entry = wrapped_idx_entry["entry"]
@@ -734,6 +734,9 @@ def create_iso_dir_entry(start_block, data_size, filename):
     )
 
 def main():
+    # VERSION
+    version = "1.1"
+
     # Valid run modes
     run_modes = ["decrypt", "patch", "map_iso"]
     
@@ -747,10 +750,10 @@ def main():
     # Get the config path from the args
     config_path = args.config_path
     
-    print("--------------------")
-    print(" KH1FM Re:Toolkit")
+    print("------------------------")
+    print(f" KH1FM Re:Toolkit v {version}")
     print(" - Some1fromthedark")
-    print("--------------------")
+    print("------------------------")
     
     # Load the contents of the config JSON object
     with open(config_path, 'r') as f:

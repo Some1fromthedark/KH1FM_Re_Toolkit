@@ -5,7 +5,7 @@ def GetHash(filename):
     file_hash = 0
     for b in filename_bytes:
         file_hash = (2 * file_hash) ^ ((int(b) << 16) % 69665)
-    return file_hash
+    return file_hash & 0xFFFFFFFF
 
 class Idx():
     def __init__(self, raw_data, start_block_offset=0):
